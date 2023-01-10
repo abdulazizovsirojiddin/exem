@@ -1,0 +1,137 @@
+.main__about{
+    .hero{
+         background: linear-gradient(rgba(47, 59, 89, 0.75),rgba(47, 59, 89, 0.75)), url(../../images/jpg/about-bg.jpg);
+         @include hero;
+       
+         
+    }
+    .faqs::before{
+            content: url(../../images/svg/yellow.svg);
+            position: absolute;
+            bottom: 57%;
+            left: -3rem;
+    }
+    .faqs{
+        background: url(../../images/svg/bg-circle.svg);
+        background-repeat: no-repeat;
+        background-position: left -30rem top 30rem;
+        position: relative;
+    
+        h1{
+            text-align: center;
+            @include title;
+            font-size: 4rem;
+            width: 100%;
+            padding-bottom: 6.4rem;
+
+        }
+        .faqs__block{
+            display: flex;
+         justify-content: space-between;
+        }
+        
+        .accordion-item {
+                background: #f2f5f9;
+                color: #495567;
+                margin-bottom: 1.6rem;
+                border: none;
+                padding: 3.2rem 2.8rem 3.2rem 3.2rem;
+                width: 73rem;
+        }
+        .accordion-item:hover{
+            background: #FFF4DF;
+            outline: none;
+        }
+        .accordion-item:nth-child(3){
+            margin-bottom: 6rem;
+        }
+        .accardion-m{
+            margin-bottom: 10rem !important;
+        }
+         .accordion-button {
+            background: transparent;
+            border: none;
+             font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.33;
+            font-family: "Space Mono", monospace;
+            letter-spacing: -1.07;
+             color: #495567;
+             width: 67rem;
+             
+             
+            }
+            
+            .accordion-button::after{
+                background-image: url(../../images/svg/accordion-path.svg);
+                width: 1.6rem;
+                height: 0.8rem
+            }
+            p{
+             @include descrtiption;  
+             color: $color-dark-navy;
+              
+            }
+            h2{
+                @include title;
+                font-size: 4rem;
+            }
+    }
+.mobility{
+   background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: right -37rem top 12rem;
+    position: relative;
+    overflow-x: hidden;
+ }
+ .mobility::before{
+    content: url(../../images/svg/mobility.svg);
+    position: absolute;
+    bottom: 4rem;
+    right: -3rem;
+ }
+ .better{
+   background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: left -37rem top 12rem;
+    position: relative;
+    overflow-x: hidden;
+ }
+ .better::before{
+    content: url(../../images/svg/better-line.svg);
+    position: absolute;
+    top: 12rem;
+    left: -5rem;
+ }
+ .our{
+    background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: left -27rem top 0rem;
+ }
+ .our{
+    @include block;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    
+    .our__circle{
+        position: relative;
+    }
+    .our__circle::before{
+        content: '01';
+        top: -5rem;
+        left: 13rem;
+        @include yellowcircle;
+        @include globaltext($font-space-mono, $font-heading-four, 700, $color-dark-navy)
+    }
+    
+    .our__circletwo::before{
+        content: '02' ;
+        position: absolute;
+    }
+    .our__circlethree::before{
+        content: '03' ;
+        position: absolute;
+    }
+}
+ 
+}

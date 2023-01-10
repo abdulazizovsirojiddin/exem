@@ -1,0 +1,25 @@
+.main__location{
+    .hero{
+         background: linear-gradient(rgba(47, 59, 89, 0.75),rgba(47, 59, 89, 0.75)), url(../../images/jpg/location.jpg);
+         @include hero;
+    }
+    .map__container{
+    padding-top: 10rem;
+    }
+    .city__block{
+        padding-bottom: 12rem;
+        padding-top: 12rem;
+        display: flex;
+        align-items: center;
+        h1{
+        @include title;
+        width: 36rem;
+        padding-right: 3rem;
+    }
+    p{
+        @include descrtiption;
+        width: 44.5rem;
+        margin-right: 10.5rem;
+    }
+    }
+}

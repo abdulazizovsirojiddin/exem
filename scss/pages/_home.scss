@@ -1,0 +1,260 @@
+/* section */
+main{
+    width: 100%;
+}
+ .section__hero{
+             position: relative;
+             
+          
+ }
+ .section__hero::before{
+    content: url(../../images/svg/yellow.svg);
+    position: absolute;
+    top: 56%;
+    left: -4rem;
+           
+ } 
+
+.section__hero{
+        margin-top: 9.6rem;
+        background: linear-gradient(rgba(47, 59, 89, 0.75),rgba(47, 59, 89, 0.75)),
+        url('../images/jpg/Bitmap.jpg') ;
+        background-size: cover;
+        padding-bottom: 15.2rem;
+        background-repeat: no-repeat;
+        
+         
+    .hero__container{
+        background: url(../../images/svg/line-strl.svg), ;
+        background-repeat: no-repeat;
+        background-position: 54rem 36rem;
+        
+    }
+    a{
+        @include btnget;
+        margin-left: 9.5rem;
+
+    }
+    .hero__title{
+        padding-top: 15.3rem;
+        padding-bottom: 4rem;
+        width: 52rem;
+        h1{
+        @include globaltext($font-space-mono, $font-heading-one, 700, $color-white,);
+        margin: 0;
+        }
+        
+    }
+    .hero__description{
+        width: 40.5rem;
+        padding-bottom: 5.4rem;
+        margin-left: 9.5rem;
+        p{
+        @include globaltext($font-lexend-deca, 1.5rem, 400, $color-white,);
+        }   
+        line-height: 1.67;
+    }
+    
+}
+
+/* second section*/
+.second{
+    background: url(../../images/svg/line-row.svg);
+    background-repeat: no-repeat;
+    background-position: top 4rem left;
+    margin-top: 16rem;
+    .second__order{
+        display: flex;
+           gap:28.4rem; 
+           
+        }
+       .second__text{
+        display: flex;
+        padding-top: 13.6rem;
+        
+        .second__img{
+            position: relative;
+        }
+        .second__img::before{
+            content: url(../../images/svg/mobile.svg);
+            margin-bottom: 100px;
+            top: -13.6rem;
+            @include yellowcircle;
+            
+        }
+         
+        .scooter::before{
+            content: url(../../images/svg/scooter.svg);
+        }
+        .scooterman::before{
+            content: url(../../images/svg/scooter-man.svg);
+        }
+         .second__info:not(last-child){
+            padding-right: 3rem;
+         }
+         .second__info{
+            
+            .second__description{
+                width: 35rem;
+            }
+            p{
+                @include descrtiption;
+                padding-top: 2.7rem;
+            }
+            h4{
+                @include globaltext($font-space-mono, $font-heading-four, 700, $color-dark-navy,);
+                padding-top: 2rem;
+            }
+
+        }
+       }
+    
+}
+/* easy */           /* easy*/ 
+ .easy, .coming, .zero, .mobility, .better, .care{
+    @include easy;
+ }
+ .easy{
+    padding-top: 20rem;
+    position: relative;
+    overflow: hidden;
+    background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: right -37rem top 20rem;
+ }
+ .easy::before{
+    content: url(../../images/svg/easy-line.svg);
+    position: absolute;
+    bottom: 0;
+    right: -5rem;
+ }
+ .coming{
+    padding-top: 16rem;
+    position: relative;
+    background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: left -37rem top 17rem;
+ }
+ .coming::before{
+    content: url(../../images/svg/coming.svg);
+    position: absolute;
+    left: -43rem;
+    top: 15rem;
+ }
+ .zero{
+    padding-top: 16rem;
+    padding-bottom: 32.9rem;
+    position: relative;
+    overflow: hidden;
+     background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: right -37rem top 15rem;
+ }
+ .zero::before{
+    content: url(../../images/svg/easy-line.svg);
+    position: absolute;
+    top: 23rem;
+    right: -44rem;
+ }
+ .mobility{
+    padding-top: 12rem;
+ }
+ .better{
+    padding-top: 12rem;
+ }
+ .care{
+    padding-top: 12rem;
+ }
+
+/*  About */  
+
+
+
+
+
+
+.sign{
+            padding: 10.2rem 0;
+            background: url(../../images/svg/circle.svg), url(../../images/svg/circle.svg), url(../../images/svg/circle-two.svg);
+            background-position: right 24rem bottom, right 64.3rem bottom, right bottom ;
+            background-repeat: no-repeat;
+            background-color: $color-dark-navy;
+    
+    .sign__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sign__left{
+        width: 44.5rem;
+        h4{
+            @include globaltext($font-space-mono, $font-heading-two, 700, $color-white);
+
+        }
+    }
+    .sign__right{
+        display: flex;
+        
+        gap: 1.8rem;
+        a{
+            padding: 8px 16px 8px 16px;
+            background-color: $color-light-grey;
+            display: flex;
+            border-radius: 4px;
+           
+            align-items: center;
+        
+        }
+        .sign__network{
+            padding-left: 1.2rem;
+            p{
+            @include globaltext($font-space-mono, 1rem, 400, $color-dark-navy);
+            line-height: 1.5;
+            }
+            h6{
+              @include globaltext($font-space-mono, 2rem, 700, $color-dark-navy);  
+
+            }
+        }
+
+    }
+    
+   
+}
+
+
+/* responsive */
+
+    @media screen and (max-width:768px) {
+        
+        .section__hero{
+        text-align: center;
+        background: linear-gradient(rgba(47, 59, 89, 0.75),rgba(47, 59, 89, 0.75)),
+        url(../../images/jpg/Bitmap-two.jpg) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    .hero__title{
+        width: 100%;
+      
+       
+    }
+    .hero__description{
+        width: 100%;
+        margin: 0;
+       
+    }
+    
+        
+    }
+    
+    
+    
+}
+        
+    
+
+
+

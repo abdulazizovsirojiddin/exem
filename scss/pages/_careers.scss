@@ -1,0 +1,69 @@
+.main__careers{
+    
+    .hero{
+         background: linear-gradient(rgba(47, 59, 89, 0.75),rgba(47, 59, 89, 0.75)), url(../../images/jpg/carrers.jpg);
+         @include hero;
+    }
+    .last{
+        .last__container{
+           
+            padding-bottom: 16rem;
+            .last__apply:not(:last-child){
+                margin-bottom: 2.4rem;
+            }
+            
+        }
+       .last__apply{
+        background-color: $color-snow;
+        padding: 3.2rem 6.4rem 3.5rem 4rem;
+        @include displayf;
+         h4{
+            @include globaltext($font-space-mono, $font-heading-four, 700, $color-dark-navy,);
+        }
+        p{
+             @include descrtiption;
+             color: $color-dark-navy;
+             padding-top: 8px;
+        }
+       }
+    }
+    .care{
+    padding-top: 20rem;
+    position: relative;
+    overflow: hidden;
+     background: url(../../images/svg/bg-circle.svg);
+    background-repeat: no-repeat;
+    background-position: right -37rem top 20rem;
+ }
+ .care::before{
+    content: url(../../images/svg/easy-line.svg);
+    position: absolute;
+    bottom: 0;
+    right: -5rem;
+ }
+ .our{
+    @include block;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    
+    .our__circle{
+        position: relative;
+    }
+    .our__circle::before{
+        content: '01';
+        top: -5rem;
+        left: 13rem;
+        @include yellowcircle;
+        @include globaltext($font-space-mono, $font-heading-four, 700, $color-dark-navy)
+    }
+    
+    .our__circletwo::before{
+        content: '02' ;
+        position: absolute;
+    }
+    .our__circlethree::before{
+        content: '03' ;
+        position: absolute;
+    }
+}
+}

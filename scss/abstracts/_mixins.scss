@@ -1,0 +1,133 @@
+@mixin globaltext ($family, $size, $weight, $color,){
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    
+}
+@mixin btnget{
+    padding: 1.4rem 3.9rem;
+    background-color: $color-yellow;
+    font-size: 1.5rem;
+    color:$color-white;
+    font-family: $font-space-mono;
+    font-weight: 700;
+    border: 3px solid $color-yellow;
+}
+@mixin title{
+    font-family:$font-space-mono;
+    font-weight: 700;
+    font-size: 4.8rem;
+    color:$color-dark-navy;
+    line-height: 1;
+    width: 47.5rem;
+}
+@mixin descrtiption{
+    font-family:$font-lexend-deca;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color:#939CAA;
+    line-height: 1.67;
+    
+}
+@mixin hero{
+         background-size: cover;
+         margin-top: 9.6rem;
+         padding: 7.2rem 0;
+         .hero__container{
+            background: url(../../images/svg/Oval.svg),url(../../images/svg/Oval.svg), url(../../images/svg/oval-two.svg);
+            background-repeat: no-repeat;
+            background-position:top 0 right 5.5rem, top 0 right 14.1rem,right;
+            
+
+         }
+
+         h1{
+            @include globaltext($font-space-mono, $font-heading-one, 700, $color-white,);
+         }
+
+}
+@mixin displayf{
+     display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+@mixin easy{
+    &__container{
+       @include displayf;
+        @include block-one;
+    }
+}
+
+@mixin block-one{
+    .block__left{
+        h1{
+            @include title;
+        }
+        p{
+            @include descrtiption;
+            width: 44.5rem;
+            padding-top: 2.4rem;
+            padding-bottom: 5.4rem;
+        }
+        
+    }
+    .block__right{
+       img{
+         border-radius: 50%;
+         width: 44.5rem;
+         height: 44.5rem;
+       }
+    }
+}
+@mixin yellowcircle{
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    background-color: $color-yellow;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin h4{
+
+}
+@mixin block{
+    .block__top{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 10.3rem;
+
+    h1{
+     @include title;
+     
+    }
+}
+   .block{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        
+    .block__bottom {
+        
+    p{
+        @include descrtiption;
+        width: 35rem;
+        padding-top: 2.7rem;
+    }
+    h4{
+        @include globaltext ($font-space-mono, $font-heading-four, 700,$color-dark-navy ,);
+        padding-top: 8.7rem;
+    }
+    img{
+        width: 24rem;
+        height: 24rem;
+        border-radius: 50%;
+        
+    }
+}
+   }
+}
